@@ -18,8 +18,7 @@ class HomeScreen extends StatelessWidget {
           leading: const Icon(Icons.abc_outlined),
           title: const Text('Nombre de ruta'),
           onTap: () {
-            final route = MaterialPageRoute(builder: (context) => const Listview1Screen());
-            Navigator.push(context, route);
+            Navigator.pushNamed(context, 'card');
           }
         ),
         separatorBuilder: (context, index) => const Divider(),
