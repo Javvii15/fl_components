@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AlertScreen extends StatelessWidget {
 
-  const AlertScreen({super.key});
+  const AlertScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
