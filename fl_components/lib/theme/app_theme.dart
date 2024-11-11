@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color primary = Colors.deepOrange;
+  static const Color primary = Colors.green;
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
          //Color primario
-        primaryColor: Colors.deepOrange,
+        primaryColor: primary,
         //AppBar Theme
         appBarTheme: const AppBarTheme(
-          color: Colors.deepOrange,
+          color: primary,
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 24)
         ),
         listTileTheme: const ListTileThemeData(
-          iconColor: Colors.deepOrange,
+          iconColor: primary,
         )
   );
 
