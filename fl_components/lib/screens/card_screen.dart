@@ -1,4 +1,3 @@
-import 'package:fl_components/theme/app_theme.dart';
 import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +15,7 @@ class CardScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
           CustomCardTipo1(),
+          CustomCardTipo2()
          ],
       )
     );
