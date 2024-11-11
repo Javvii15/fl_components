@@ -1,29 +1,29 @@
+import 'package:fl_components/routes/app_routes.dart';
 import 'package:fl_components/screens/listview1_screens.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
 
   const HomeScreen({Key? key}) : super(key: key);
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title : const Text('Compnentes de Flutter'),
-        backgroundColor: Colors.blue,
-        elevation:0,
+        title: const Text('Componentes de Flutter'),
+        //backgroundColor: Colors.blueAccent,
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-          leading: const Icon(Icons.abc_outlined),
-          title: const Text('Nombre de ruta'),
-          onTap: () {
-            Navigator.pushNamed(context, 'vwrwe');
-          }
+          leading:  Icon(AppRoutes.MenuOptions[index].icon),
+          title:  Text(AppRoutes.MenuOptions[index].name),
+          onTap: (){
+            Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);
+          },
         ),
         separatorBuilder: (context, index) => const Divider(),
-        itemCount: 5
+        itemCount: AppRoutes.MenuOptions.length,
       )
-      );
+    );
   }
 }
