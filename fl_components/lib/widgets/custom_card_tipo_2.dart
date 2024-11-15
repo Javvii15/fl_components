@@ -6,12 +6,16 @@ class CustomCardTipo2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
       child: Column(
         children: [
           const FadeInImage(
             image: NetworkImage('https://img.rtve.es/imagenes/quien-hasbullah-magomedov/1628259969545.jpg'),
             placeholder: AssetImage('assets/jar-loading.gif'),
-            //width: double.infinity,
+            width: double.infinity,
             height: 200,
             fit: BoxFit.cover,
             fadeInDuration: Duration(milliseconds: 3000),
