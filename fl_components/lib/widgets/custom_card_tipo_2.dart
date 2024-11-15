@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomCardTipo2 extends StatelessWidget {
-  const CustomCardTipo2({super.key});
+
+  final String imageUrl;
+
+  const CustomCardTipo2({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +15,17 @@ class CustomCardTipo2 extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const FadeInImage(
-            image: NetworkImage('https://img.rtve.es/imagenes/quien-hasbullah-magomedov/1628259969545.jpg'),
-            placeholder: AssetImage('assets/jar-loading.gif'),
+          FadeInImage(
+            image: NetworkImage(imageUrl),
+            placeholder: const AssetImage('assets/jar-loading.gif'),
             width: double.infinity,
             height: 200,
             fit: BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 3000),
+            fadeInDuration: const Duration(milliseconds: 3000),
           ),
           Container(
             alignment: AlignmentDirectional.centerEnd,
-            padding: EdgeInsets.only(top: 10, bottom:10, right: 20),
+            padding: const EdgeInsets.only(top: 10, bottom:10, right: 20),
             child: 
             const Text('Hasbulla')
           )
