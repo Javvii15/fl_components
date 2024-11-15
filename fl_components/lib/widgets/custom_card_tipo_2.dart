@@ -8,9 +8,10 @@ class CustomCardTipo2 extends StatelessWidget {
     return const Card(
       child: Column(
         children: [
-          Image(
-            image: NetworkImage('https://img.rtve.es/imagenes/quien-hasbullah-magomedov/1628259969545.jpg')
-            )
+          FadeInImage(
+            image: NetworkImage('https://img.rtve.es/imagenes/quien-hasbullah-magomedov/1628259969545.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+          )       
         ],
       ),
     );
