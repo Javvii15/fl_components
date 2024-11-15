@@ -5,13 +5,23 @@ class CustomCardTipo2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return Card(
       child: Column(
         children: [
-          FadeInImage(
+          const FadeInImage(
             image: NetworkImage('https://img.rtve.es/imagenes/quien-hasbullah-magomedov/1628259969545.jpg'),
             placeholder: AssetImage('assets/jar-loading.gif'),
-          )       
+            //width: double.infinity,
+            height: 200,
+            fit: BoxFit.cover,
+            fadeInDuration: Duration(milliseconds: 3000),
+          ),
+          Container(
+            alignment: AlignmentDirectional.centerEnd,
+            padding: EdgeInsets.only(top: 10, bottom:10, right: 20),
+            child: 
+            const Text('Hasbulla')
+          )
         ],
       ),
     );
