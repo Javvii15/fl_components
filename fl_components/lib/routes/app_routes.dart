@@ -27,7 +27,7 @@ class AppRoutes {
         name: 'Alertas',
         screen: const AlertScreen()),
     MenuOption(
-        route: 'caed',
+        route: 'card',
         icon: Icons.house_rounded,
         name: 'Cards (Tarjetas)',
         screen: const CardScreen())

@@ -25,6 +25,7 @@ class AppTheme {
           backgroundColor: primary,
           shape: StadiumBorder(),
           elevation: 5,
+          foregroundColor: Colors.white,
         )
   );
 
