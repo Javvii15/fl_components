@@ -5,12 +5,13 @@ class WidgetReutilizable extends StatelessWidget {
   final String descripcion;
   final String imageUrl;
 
-  const WidgetReutilizable({
-    super.key,
-    required this.titulo,
-    required this.descripcion,
-    required this.imageUrl,
-  });
+  const WidgetReutilizable(
+    { super.key, 
+      required this.titulo, 
+      required this.descripcion, 
+      required this.imageUrl
+    }
+    );
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class WidgetReutilizable extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

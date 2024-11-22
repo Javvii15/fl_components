@@ -1,36 +1,36 @@
-
+import 'package:fl_components/widgets/widget_reutilizable.dart';
 import 'package:flutter/material.dart';
 
 class Listview1Screen extends StatelessWidget {
-  final options = const ['Hasbulla piscina', 'Hasbulla friolero', 'Hasbulla con el gato', 'Hasbulla con pingüino'];
-  //hasbulla piscina: https://pbs.twimg.com/media/FDuPcNCXoAMqk2h.jpg
-  //hasbulla friolero: https://wallpapers.com/images/hd/hasbulla-snow-winter-clothing-1u51peghgwxqmat2.jpg
-  //hasbulla con el gato: https://i.pinimg.com/736x/0f/07/f2/0f07f215f7a95e0fad7c960502f6df79.jpg
-  //hasbulla con pinguino: https://pbs.twimg.com/media/Fbn9NiAakAArzVx.jpg
   const Listview1Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text("ListView Tipo 1"),
-          //backgroundColor: const Color.fromARGB(255, 19, 75, 112),
-          foregroundColor: Colors.blue),
+        title: const Text("ListView Tipo 1"),
+      ),
       body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
-          ...options
-              .map((e) => 
-              ListTile(
-                    trailing: Icon(Icons.arrow_forward_ios_outlined),
-                    title: Text(e),
-                  ))
-              .toList()
-          /**/
+          ListTile(
+            leading: const Icon(Icons.image),
+            title: const Text('Hasbulla piscina'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (variables) => const WidgetReutilizable(
+                    titulo: 'Hasbulla piscina',
+                    descripcion: 'Hasbulla en un día soleado en la piscina.',
+                    imageUrl: 'https://pbs.twimg.com/media/FDuPcNCXoAMqk2h.jpg',
+                  ),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
   }
 }
-
-
-
