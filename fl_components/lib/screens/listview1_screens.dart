@@ -29,6 +29,57 @@ class Listview1Screen extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: 10),
+          ListTile(
+            leading: const Icon(Icons.image),
+            title: const Text('Hasbulla friolero'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (variables) => const WidgetReutilizable(
+                    titulo: 'Hasbulla friolero',
+                    descripcion: 'Hasbulla abrigado en día frío en invierno.',
+                    imageUrl: 'https://wallpapers.com/images/hd/hasbulla-snow-winter-clothing-1u51peghgwxqmat2.jpg',
+                  ),
+                ),
+              );
+            },
+          ),
+          const SizedBox(height: 10),
+          ListTile(
+            leading: const Icon(Icons.image),
+            title: const Text('Hasbulla con el gato'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (variables) => const WidgetReutilizable(
+                    titulo: 'Hasbulla con el gato',
+                    descripcion: 'Hasbulla y su gato.',
+                    imageUrl: 'https://i.pinimg.com/736x/0f/07/f2/0f07f215f7a95e0fad7c960502f6df79.jpg',
+                  ),
+                ),
+              );
+            },
+          ),
+          const SizedBox(height: 10),
+          ListTile(
+            leading: const Icon(Icons.image),
+            title: const Text('Hasbulla con pingüino'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (variables) => const WidgetReutilizable(
+                    titulo: 'Hasbulla con el pingüino',
+                    descripcion: 'Hasbulla con un pingüino.',
+                    imageUrl: 'https://pbs.twimg.com/media/Fbn9NiAakAArzVx.jpg',
+                  ),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
