@@ -1,4 +1,5 @@
 import 'package:fl_components/models/models.dart';
+import 'package:fl_components/screens/animated_screen.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -23,14 +24,24 @@ class AppRoutes {
         screen: const Listview2Screen()),
     MenuOption(
         route: 'alert',
-        icon: Icons.house_rounded,
+        icon: Icons.add_alert_outlined,
         name: 'Alertas',
         screen: const AlertScreen()),
     MenuOption(
         route: 'card',
-        icon: Icons.house_rounded,
+        icon: Icons.card_giftcard,
         name: 'Cards (Tarjetas)',
-        screen: const CardScreen())
+        screen: const CardScreen()),
+    MenuOption(
+        route: 'avatar',
+        icon: Icons.person_2_rounded,
+        name: 'Avatar',
+        screen: const AvatarScreen()),
+    MenuOption(
+        route: 'animated',
+        icon: Icons.play_circle_fill_outlined,
+        name: 'Animated Container',
+        screen: const AnimatedScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
