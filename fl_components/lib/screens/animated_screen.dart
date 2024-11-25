@@ -9,6 +9,12 @@ class AnimatedScreen extends StatefulWidget {
 }
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
+
+  double _width = 50;
+  double _height = 50;
+  Color _color = Colors.green;
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +22,14 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         title: Text('Animated Container')
       ),
       body: Center(
-         child: Text('AnimatedScreen'),
+         child: Container(
+          height: _height,
+          width: _width,
+          decoration: BoxDecoration(
+            color: _color,
+            borderRadius : _borderRadius,
+          )
+         )
       ),
     );
   }
