@@ -11,7 +11,7 @@ class InputsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
          child: Column(
           children: [
@@ -21,7 +21,20 @@ class InputsScreen extends StatelessWidget {
               helperText: 'Solo letras',
               icon: Icons.verified_outlined,
               suffixIcon: Icons.person_2_rounded,
-            )
+            ),
+            SizedBox(height: 30),
+            CustomTextFormField(
+              hintText: 'Apellidos',
+              labelText: 'Apellidos del usuario',
+              icon: Icons.person_4_outlined,
+            ),
+            SizedBox(height: 30),
+            CustomTextFormField(
+              hintText: 'E-Mail',
+              labelText: 'E-Mail del usuario',
+              icon: Icons.email_rounded,
+              keyboardType: TextInputType.emailAddress,
+            ),
           ]
          ),
       ),
