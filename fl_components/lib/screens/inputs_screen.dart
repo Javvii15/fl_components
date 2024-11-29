@@ -15,7 +15,13 @@ class InputsScreen extends StatelessWidget {
          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
          child: Column(
           children: [
-            CustomTextFormField()
+            CustomTextFormField(
+              hintText: 'Nombre',
+              labelText: 'Nombre',
+              helperText: 'Solo letras',
+              icon: Icons.verified_outlined,
+              suffixIcon: Icons.person_2_rounded,
+            )
           ]
          ),
       ),

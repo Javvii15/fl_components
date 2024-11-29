@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
+
+  final String? hintText;
+  final String? labelText;
+  final String? helperText;
+  final IconData? icon;
+  final IconData? suffixIcon;
+
   const CustomTextFormField({
-    super.key,
+    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon,
   });
 
   @override
@@ -21,19 +28,13 @@ class CustomTextFormField extends StatelessWidget {
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
-        hintText: 'Nombre',
-        labelText: 'Nombre',
-        helperText: 'Solo letras',
+        hintText: hintText,
+        labelText: labelText,
+        helperText: helperText,
         //prefixIcon: Icon(Icons.verified_user_outlined),
-        icon: Icon(Icons.assignment_ind_outlined),
-        suffixIcon: Icon(Icons.person_2_outlined),
-        /*border: OutlineInputBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(10),
-            topRight: Radius.circular(10)
-          )
-        )
-        */
+        icon: Icon(icon),
+        suffixIcon: Icon(suffixIcon),
+
       ),
     );
   }
