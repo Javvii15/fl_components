@@ -8,9 +8,10 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? icon;
   final IconData? suffixIcon;
   final TextInputType? keyboardType;
+  final bool obscureText;
 
   const CustomTextFormField({
-    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType,
+    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText,
   });
 
   @override
@@ -20,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
       //initialValue: 'Introduce tu nombre',
       textCapitalization: TextCapitalization.words,
       keyboardType: keyboardType,
+      obscureText: obscureText,
       onChanged: (value) {
         print('value: $value');
       },
