@@ -15,6 +15,16 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   Color _color = Colors.green;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
 
+  void _changeShape() {
+    setState(() {
+      _width = _width == 100 ? 200 : 100;
+      _height = _height == 100 ? 200 : 100;
+      _color = _color == Colors.green ? Colors.blue : Colors.green;
+      _borderRadius =
+          _borderRadius == BorderRadius.circular(20) ? BorderRadius.circular(50) : BorderRadius.circular(20);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +41,17 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
           )
          )
       ),
+
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.play_circle),
+        onPressed: () {
+          _width = 200;
+          _height = 300;
+          setState(() {
+            
+          });
+        }
+        ),
     );
   }
 }
