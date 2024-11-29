@@ -7,6 +7,17 @@ class InputsScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
+    final myFormKey = GlobalKey<FormState>(); 
+
+    final Map<String, String> formValues = {
+      'nombre': 'Andres',
+      'apellido': 'Iniesta',
+      'email': 'iniesta@gmail.com',
+      'password': '12345678',
+      'role': 'usuario'
+    };
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
@@ -14,6 +25,7 @@ class InputsScreen extends StatelessWidget {
       body: SingleChildScrollView(
          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
          child: Form(
+          key: myFormKey,
            child: Column(
             children: [
               CustomTextFormField(
@@ -49,7 +61,11 @@ class InputsScreen extends StatelessWidget {
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-           
+                  FocusScope.of(context).requestFocus(FocusNode());
+                  if(!myFormKey.currentState!.validate()){
+                    print('Formulario no valido');
+                    return;
+                  }
                 }, 
                 child: SizedBox(
                   width: double.infinity,
